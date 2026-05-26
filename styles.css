@@ -612,6 +612,7 @@ h3 {
   background: var(--graphite);
   box-shadow: 0 12px 34px rgba(28, 21, 15, 0.12);
   transition: transform var(--transition), box-shadow var(--transition);
+  contain: layout style;
 }
 
 .service-card:hover {
@@ -1175,10 +1176,58 @@ details p {
   gap: 18px;
 }
 
+.sticky-callbar,
+.sticky-callbar-wa {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding-bottom: 72px;
+  }
+
+  .sticky-callbar,
+  .sticky-callbar-wa {
+    position: fixed;
+    z-index: 65;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 56px;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: opacity var(--transition);
+  }
+
+  .sticky-callbar {
+    left: 0;
+    right: 52%;
+    color: #fff;
+    background: #232323;
+  }
+
+  .sticky-callbar-wa {
+    left: 52%;
+    right: 0;
+    color: #fff;
+    background: #25d366;
+  }
+
+  body.contact-active .sticky-callbar,
+  body.contact-active .sticky-callbar-wa {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
 .float-whatsapp,
 .chat-toggle {
   position: fixed;
-  z-index: 60;
+  z-index: 80;
   right: 22px;
   display: grid;
   place-items: center;
@@ -1549,9 +1598,8 @@ body.contact-active .chat-toggle {
 }
 
 @media (max-width: 640px) {
-  /* ★ Mobile: padding-bottom для safe-area */
   body {
-    padding-bottom: 80px;
+    padding-bottom: 72px;
   }
 
   h1 {
@@ -1658,19 +1706,14 @@ body.contact-active .chat-toggle {
     height: 56px;
   }
 
-  .float-whatsapp {
-    bottom: max(18px, env(safe-area-inset-bottom, 18px)); /* ★ было 18px */
-  }
-
-  .chat-toggle {
-    bottom: calc(86px + env(safe-area-inset-bottom, 0px)); /* ★ было 86px */
-  }
+  .float-whatsapp { bottom: calc(74px + env(safe-area-inset-bottom, 0px)); }
+  .chat-toggle { bottom: calc(142px + env(safe-area-inset-bottom, 0px)); }
 
   body.hero-active .float-whatsapp,
   body.hero-active .chat-toggle {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(12px);
+    opacity: 0.5;
+    pointer-events: auto;
+    transform: none;
   }
 
   .chat-widget {
