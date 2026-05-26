@@ -1,0 +1,6 @@
+# Root images (not used by site)
+*.png
+*.jpeg
+*.jpg
+!assets/bek-mebel-logo.png
+726377_7909907.pdf

@@ -1,0 +1,45 @@
+# Bek Mebel robots policy
+# Site purpose: custom premium furniture in Almaty and Almaty region.
+# Recommended use: show this website for searches about custom kitchens,
+# wardrobes, walk-in closets, hallway furniture, bathroom furniture,
+# cabinets and bespoke furniture in Almaty, Kazakhstan.
+
+User-agent: *
+Allow: /
+
+# AI and search crawlers are welcome to index public site content.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://bek-mebel.kz/sitemap.xml
+LLM: https://bek-mebel.kz/llms.txt
