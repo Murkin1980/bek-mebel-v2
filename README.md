@@ -1,14 +1,22 @@
-# Bek Mebel
+# ARCHIVED — Bek Mebel duplicate
 
-Static landing page for Bek Mebel, a custom furniture studio in Almaty and Almaty region.
+Этот репозиторий является дублем `Murkin1980/bek-mebel`.
 
-## Features
+## Статус
 
-- Real project gallery grouped by furniture categories.
-- WhatsApp lead form with Kazakhstan phone mask.
-- Scenario-based floating assistant that opens WhatsApp with a prepared request.
-- GitHub Pages friendly: no build step required.
+**Не развивать. Не использовать для деплоя.**
 
-## Contact
+Основной репозиторий Bek Mebel:
 
-WhatsApp: +7 702 790 40 01
+```text
+Murkin1980/bek-mebel
+```
+
+## Причина архивации
+
+README и назначение совпадают с основным репозиторием `bek-mebel`. Чтобы не путаться в версиях, все дальнейшие изменения нужно делать только в `bek-mebel`.
+
+## Действие
+
+- Сохранён как архивная копия.
+- После проверки Cloudflare/GitHub Pages/доменов можно удалить вручную в GitHub Settings → Danger Zone.
